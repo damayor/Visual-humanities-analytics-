@@ -1,0 +1,40 @@
+{
+  "Name": "Config",
+  "dualPhantomMode":"false",
+  "linearTolerance": 2,
+  "angularTolerance": 10.0,
+  "quantityLevels": 4,
+  "percents": [ 0.3, 0.3, 0.3, 0.1 ],
+  "maxRedLevels": [ 240, 15, 10, 0.75 ],
+  "greenLevels": [ 40, 5, 3, 0.5 ],
+  "bestValuesMeasures": [ 10, 2, 1, 0.25 ],
+  "defaultXYZOrientationRange": [ -50, 40, -5, 24, -40, 30 ],
+  "grabbingPhantomButtons": [ -1, 1, 1 ],
+
+  "fractures": [
+    {
+      "nombre": "Clavicula Izquierda",
+      "numSegmentos": 2,
+      "numLevels": 3,
+      "orientationRanges": [ -50, 40, -30, 40, -40, 20 ]
+    },  
+    {
+      "nombre": "Clavicula Derecha",
+      "numSegmentos": 2,
+      "numLevels": 4,
+      "orientationRanges": [ -50, 40, -35, 45, -40, 20 ]
+    },
+    {
+      "nombre": "Radio Distal Izquierdo",
+      "numSegmentos": 2,
+      "numLevels": 3,
+      "orientationRanges": [ -25, 30, 10, 14, -14, 15 ]
+    },
+    {
+      "nombre": "Radio Distal Derecho",
+      "numSegmentos": 2,
+      "numLevels": 3,
+      "orientationRanges": [ -25, 30, 10, 14, -14, 15 ]
+    }
+  ]
+}
