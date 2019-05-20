@@ -74,7 +74,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left cmd
+    positiveButton: left shift
     altNegativeButton: 
     altPositiveButton: mouse 2
     gravity: 1000
@@ -185,8 +185,8 @@ InputManager:
     m_Name: Fire1
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: joystick button 0
+    negativeButton: home
+    positiveButton: end
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000

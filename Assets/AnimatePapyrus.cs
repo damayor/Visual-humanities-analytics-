@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AnimatePapyrus : MonoBehaviour {
 
+
+    public float scrollSpeed = 0.5f;
     Renderer rend;
 
     void Start()
@@ -14,8 +16,9 @@ public class AnimatePapyrus : MonoBehaviour {
     void Update()
     {
         // Animates main texture scale in a funky way!
-        float scaleX = Mathf.Cos(Time.time) * 0.5f + 1;
-        float scaleY = Mathf.Sin(Time.time) * 0.5f + 1;
-        rend.material.mainTextureScale = new Vector2(scaleX, scaleY);
+       
+        float offset = Time.time * scrollSpeed;
+        rend.material.SetTextureOffset("_MainTex", new Vector2(0, offset));
+
     }
 }

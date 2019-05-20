@@ -232,4 +232,5 @@ public class bl_Joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             return (StickRect.position.y - DeathArea.y) / Radio;
         }
     }
+
 }
