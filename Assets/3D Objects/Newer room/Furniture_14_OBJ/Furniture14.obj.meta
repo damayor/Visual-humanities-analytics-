@@ -1,61 +1,86 @@
 fileFormatVersion: 2
-guid: de20efb1b634a92439f746d0f52dbd1c
-timeCreated: 1558397095
+guid: 9b5942ff053563c409aacdea4e021b16
+timeCreated: 1558451438
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Circle01
-    100002: Circle02
-    100004: Circle03
-    100006: Circle04
-    100008: //RootNode
-    100010: Rectangle0
-    100012: Rectangle1
-    100014: Rectangle2
-    100016: Rectangle3
-    100018: Rectangle4
-    400000: Circle01
-    400002: Circle02
-    400004: Circle03
-    400006: Circle04
-    400008: //RootNode
-    400010: Rectangle0
-    400012: Rectangle1
-    400014: Rectangle2
-    400016: Rectangle3
-    400018: Rectangle4
-    2100000: prs009_metall__V
-    2100002: prs009_black__Vr
-    2100004: prs009_white__Vr
-    2100006: prs009_center__V
-    2300000: Circle01
-    2300002: Circle02
-    2300004: Circle03
-    2300006: Circle04
-    2300008: Rectangle0
-    2300010: Rectangle1
-    2300012: Rectangle2
-    2300014: Rectangle3
-    2300016: Rectangle4
-    3300000: Circle01
-    3300002: Circle02
-    3300004: Circle03
-    3300006: Circle04
-    3300008: Rectangle0
-    3300010: Rectangle1
-    3300012: Rectangle2
-    3300014: Rectangle3
-    3300016: Rectangle4
-    4300000: Circle01
-    4300002: Circle02
-    4300004: Circle03
-    4300006: Circle04
-    4300008: Rectangle0
-    4300010: Rectangle1
-    4300012: Rectangle2
-    4300014: Rectangle3
-    4300016: Rectangle4
+    100000: cap_2_pivot
+    100002: cap_3_pivot
+    100004: cap_4_pivot
+    100006: cap_5
+    100008: cap_pivot
+    100010: Cylinder01
+    100012: Cylinder02
+    100014: Cylinder03
+    100016: Cylinder04
+    100018: //RootNode
+    100020: Loft01_pivot
+    100022: Loft02_pivot
+    100024: Loft03_pivot
+    100026: Loft04_pivot
+    100028: Plane01
+    400000: cap_2_pivot
+    400002: cap_3_pivot
+    400004: cap_4_pivot
+    400006: cap_5
+    400008: cap_pivot
+    400010: Cylinder01
+    400012: Cylinder02
+    400014: Cylinder03
+    400016: Cylinder04
+    400018: //RootNode
+    400020: Loft01_pivot
+    400022: Loft02_pivot
+    400024: Loft03_pivot
+    400026: Loft04_pivot
+    400028: Plane01
+    2100000: Plastic01
+    2100002: Silver
+    2100004: _1___Default
+    2100006: _3___Default
+    2300000: cap_2_pivot
+    2300002: cap_3_pivot
+    2300004: cap_4_pivot
+    2300006: cap_5
+    2300008: cap_pivot
+    2300010: Cylinder01
+    2300012: Cylinder02
+    2300014: Cylinder03
+    2300016: Cylinder04
+    2300018: Loft01_pivot
+    2300020: Loft02_pivot
+    2300022: Loft03_pivot
+    2300024: Loft04_pivot
+    2300026: Plane01
+    3300000: cap_2_pivot
+    3300002: cap_3_pivot
+    3300004: cap_4_pivot
+    3300006: cap_5
+    3300008: cap_pivot
+    3300010: Cylinder01
+    3300012: Cylinder02
+    3300014: Cylinder03
+    3300016: Cylinder04
+    3300018: Loft01_pivot
+    3300020: Loft02_pivot
+    3300022: Loft03_pivot
+    3300024: Loft04_pivot
+    3300026: Plane01
+    4300000: cap_2_pivot
+    4300002: cap_3_pivot
+    4300004: cap_4_pivot
+    4300006: cap_5
+    4300008: cap_pivot
+    4300010: Cylinder01
+    4300012: Cylinder02
+    4300014: Cylinder03
+    4300016: Cylinder04
+    4300018: Loft01_pivot
+    4300020: Loft02_pivot
+    4300022: Loft03_pivot
+    4300024: Loft04_pivot
+    4300026: Plane01
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -92,7 +117,7 @@ ModelImporter:
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
-    importLights: 0
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1

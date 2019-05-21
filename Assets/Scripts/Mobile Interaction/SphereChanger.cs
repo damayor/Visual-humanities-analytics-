@@ -46,7 +46,7 @@ public class SphereChanger : MonoBehaviour {
             yield return new WaitForSeconds(0.75f);
 
             //Change the camera position
-            Camera.main.transform.parent.position = nextSphere.position;
+            /*Camera.main.*/transform./*parent.*/position = nextSphere.position;
 
             //Fade the Quad object out 
             StartCoroutine(FadeOut(0.75f, m_Fader.GetComponent<Renderer>().material));

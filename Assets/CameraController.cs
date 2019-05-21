@@ -6,7 +6,7 @@ using System.Collections;
 public class CameraController : MonoBehaviour
 {
 
-    public float speed = 10.0f;
+    public float speed = 40.0f;
     public float rotationSpeed = 100.0f;
 
     float horizontalSpeed = 2.0f;
@@ -32,7 +32,7 @@ public class CameraController : MonoBehaviour
 #if UNITY_EDITOR
 
 
-        float translation = Input.GetAxis("Vertical") * speed;
+        float translation = Input.GetAxis("Vertical") * 40f; //speed;
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
 
         // Make it move 10 meters per second instead of 10 meters per frame...
@@ -51,13 +51,13 @@ public class CameraController : MonoBehaviour
             //float h = horizontalSpeed * Input.GetAxis("Mouse X");
 
             float v = verticalSpeed * Input.GetAxis("Fire1");
-            transform.Rotate(v, 0, 0);
+            transform.Rotate(-translation, 0, 0);
         }
 
 #else
 
         float translation = Joystick.Vertical * 5.0f;
-        float rotation = Joystick.Horizontal * 5.0f;
+        float rotation = Joystick.Horizontal * 10.0f;
 
         // Make it move 10 meters per second instead of 10 meters per frame...
         translation *= Time.deltaTime;

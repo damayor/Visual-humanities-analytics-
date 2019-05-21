@@ -11,6 +11,7 @@ TagManager:
   - Cursor
   - Risk Tissue
   - CameraGuides
+  - Digital
   layers:
   - Default
   - TransparentFX
