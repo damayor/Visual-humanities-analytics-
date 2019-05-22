@@ -38,34 +38,25 @@ public class TapRaycast : MonoBehaviour {
                         }
                     }
                 }
-
-                //if (Input.touchCount > 0)
-                //{
-                   
-                //}
-                //else
-                //{
-                //    //pos claro como va a tochar si esta en la pantalla
-                //    Debug.Log("No touches available");
-                //}
-
             }
         }
         else if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXEditor)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                
-                Ray raycast = cam.ScreenPointToRay(Input.mousePosition);
+                Vector3 posMouse = Input.mousePosition;
+                //Debug.Log("le esta dando a " + posMouse);
+                Ray raycast = cam.ScreenPointToRay(posMouse);
                 RaycastHit raycastHit;
                 if (Physics.Raycast(raycast, out raycastHit))
                 {
 
-                    GameObject objHit = raycastHit.collider.gameObject;
-                    Debug.Log("Hit "+ objHit.name );
-                      
-                    //OR with Tag
+                    Transform objectHit = raycastHit.transform;
+                    
 
+                    GameObject objHit = raycastHit.collider.gameObject;
+                    Debug.Log("Hit 2"+ objHit.name );
+                      
                     if (raycastHit.collider.CompareTag("Digital"))
                     {
                         Debug.Log("BIENVENIDO A LAS HUMANIDADES DIGITALES");

@@ -3,7 +3,7 @@ using System.Collections;
 
 // A very simplistic car driving on the x-z plane.
 
-public class CameraController : MonoBehaviour
+public class FirstPersonCameraController : MonoBehaviour
 {
 
     public float speed = 40.0f;
@@ -51,13 +51,13 @@ public class CameraController : MonoBehaviour
             //float h = horizontalSpeed * Input.GetAxis("Mouse X");
 
             float v = verticalSpeed * Input.GetAxis("Fire1");
-            transform.Rotate(-translation, 0, 0);
+           // transform.Rotate(-translation, 0, 0);
         }
 
 #else
 
         float translation = Joystick.Vertical * 5.0f;
-        float rotation = Joystick.Horizontal * 10.0f;
+        float rotation = Joystick.Horizontal * 20.0f;
 
         // Make it move 10 meters per second instead of 10 meters per frame...
         translation *= Time.deltaTime;
