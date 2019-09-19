@@ -29,7 +29,7 @@ public class FirstPersonCameraController : MonoBehaviour
         // The value is in the range -1 to 1
 
 
-#if UNITY_EDITOR
+#if !UNITY_EDITOR
 
 
         float translation = Input.GetAxis("Vertical") * 40f; //speed;
@@ -74,7 +74,11 @@ public class FirstPersonCameraController : MonoBehaviour
 
             float v =  JoystickR.Vertical;
 
-            transform.Rotate(-v, 0, 0);
+            //if (v < 30 && v > -30)
+            if (transform.localEulerAngles.x < 30f && transform.localEulerAngles.x > -30f)
+            {
+                transform.Rotate(-v, 0, 0);
+            }
         }
 #endif
 

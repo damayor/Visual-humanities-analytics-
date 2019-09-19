@@ -4,12 +4,16 @@ using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
 
+
 namespace UnityStandardAssets.Characters.FirstPerson
 {
+
     [RequireComponent(typeof (CharacterController))]
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+        public bl_Joystick Joystick;//Joystick reference for assign in inspector
+
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -41,6 +45,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+
+
 
         // Use this for initialization
         private void Start()
@@ -203,10 +209,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void GetInput(out float speed)
         {
-            // Read input
+
+#if UNITY_EDITOR //no funciona ahi :s
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
-
+#else
+            float horizontal = Joystick.Horizontal;
+            float vertical = Joystick.Vertical;//get the horizontal value of joystick
+#endif
             bool waswalking = m_IsWalking;
 
 #if !MOBILE_INPUT
