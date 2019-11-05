@@ -5,6 +5,7 @@ using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
 
 
+
 namespace UnityStandardAssets.Characters.FirstPerson
 {
 
@@ -13,6 +14,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     public class FirstPersonController : MonoBehaviour
     {
         public bl_Joystick Joystick;//Joystick reference for assign in inspector
+        public VariableJoystick variableJoystick;
 
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
@@ -87,6 +89,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+          
         }
 
 
@@ -210,13 +214,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void GetInput(out float speed)
         {
 
-#if UNITY_EDITOR //no funciona ahi :s
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
-#else
-            float horizontal = Joystick.Horizontal;
-            float vertical = Joystick.Vertical;//get the horizontal value of joystick
-#endif
+//#if !UNITY_EDITOR //no funciona ahi :s
+//            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+//            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+//#else
+            //float horizontal = Joystick.Horizontal;
+            //float vertical = Joystick.Vertical;//get the horizontal value of joystick
+
+            float horizontal = variableJoystick.Horizontal;
+            float vertical = variableJoystick.Vertical; ;
+
+
+            //#endif
             bool waswalking = m_IsWalking;
 
 #if !MOBILE_INPUT
@@ -265,5 +274,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity*0.1f, hit.point, ForceMode.Impulse);
         }
+
+       
     }
+
+
 }
